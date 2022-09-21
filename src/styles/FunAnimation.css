@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    padding: 0;
+
+}  
+
+.box-container{
+    padding: 30px;
+
+    padding-bottom: 20 rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(64, 43, 226);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.box{
+    width: 25 rem;
+    height: 25 rem;
+    background-color: rgb(43, 226, 67);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

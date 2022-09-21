@@ -1,0 +1,23 @@
+@media(max-width:600px){
+    .small-only{
+        color:red;
+    }
+
+}
+.large-screens{
+    display:none;
+}
+@media(min-width:600px){
+    .large-screens{
+        display:block;
+    }
+    .small-screens{
+        display:none;
+    }
+}
+@media(max-width:400px)
+{
+    .small-only{
+        color: blue;
+    }
+}
