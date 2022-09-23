@@ -1,5 +1,5 @@
 import Settings from '../QuizAppComponents/Settings';
-import './App.css';
+import "../styles/QuizApp.css"
 
 
 function QuizApp() {

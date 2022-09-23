@@ -9,6 +9,7 @@ import FunAnimation from "./pages/FunAnimation";
 import Box1 from "./components/Box1";
 import Project from "./pages/Project";
 import ToDoListApp from "./ProjectsFolder/ToDolistApp";
+import QuizApp from "./ProjectsFolder/QuizApp";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/funanimation" element={<FunAnimation />} />
           <Route path="/ToDolistApp" element={<ToDoListApp/>} />
+          {/* <Route path="/QuizApp" element={<QuizApp/>} /> */}
+
          </Routes>
       </Router>
        <Footer/>
