@@ -6,9 +6,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
 import "../styles/Footer.css";
+import { createPortal } from "react-dom";
 
 function Footer() {
-  return (
+  return createPortal(
     <div className="footer">
       <div className="socialMedia">
         <InstagramIcon />
@@ -17,7 +18,7 @@ function Footer() {
         <LinkedInIcon />
         <EmailIcon/>
       </div>
-    </div>
+    </div>, document.getElementById("Footer") as Element
   );
 }
 

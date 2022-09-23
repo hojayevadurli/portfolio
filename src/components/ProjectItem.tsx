@@ -8,7 +8,6 @@ type ProjectItemProps={
     id:number
  }
 
- 
 function ProjectItem({ project, id}: ProjectItemProps) {
   const navigate = useNavigate();
   return (

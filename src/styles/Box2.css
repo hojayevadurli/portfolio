@@ -21,3 +21,19 @@
         color: blue;
     }
 }
+
+
+
+.box-container1{
+    padding: 30px;
+
+    padding-bottom: 20 rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(192, 43, 226);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}

@@ -22,12 +22,9 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/funanimation" element={<FunAnimation />} />
           <Route path="/ToDolistApp" element={<ToDoListApp/>} />
-
-          {/* <Route path="/box2" element={<FunAnimation />} /> */}
-
-        </Routes>
-        <Footer/>
+         </Routes>
       </Router>
+       <Footer/>
     </div>
   );
 }
