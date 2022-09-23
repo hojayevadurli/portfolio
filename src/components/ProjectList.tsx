@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import toDoListApp from "../styles/toDoListApp.png";
+import QuizApp from "../styles/QuizApp.png";
 
 
 
@@ -15,13 +16,14 @@ export const ProjectList : ProjectType[] = [
       name: "To Do List App",
       image: toDoListApp,
       skills: "React, TypeScript ,HTML,CSS",
-      url:"../projects/toDoListApp"
-    } 
-    // {
-    //   id:4,
-    //   name: "Project 2",
-    //   skills: "React",
-    // },
+      url:"../ProjectsFolder/toDoListApp"
+    },
+    {
+      name: "Project 2",
+      image:QuizApp,
+      skills: "React",
+      url:"../ProjectsFolder/QuizApp"
+    }
     // {
     //   id:6,
     //   name: "Project 3",
