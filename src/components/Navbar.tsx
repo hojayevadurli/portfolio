@@ -27,6 +27,8 @@ function Navbar() {
         <Link to="/projects"> Projects </Link>
         <Link to="/experience"> Experience </Link>
         <Link to="/funanimation"> FunAnimation</Link>
+        {/* <Link to="/ToDolistApp"> To Do List App</Link> */}
+
 
       </div>
     </div>

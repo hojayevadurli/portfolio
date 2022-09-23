@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FunAnimation from "./pages/FunAnimation";
 import Box1 from "./components/Box1";
+import Project from "./pages/Project";
+import ToDoListApp from "./ProjectsFolder/ToDolistApp";
 
 function App() {
   return (
@@ -16,8 +18,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:id" element={<Project />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/funanimation" element={<FunAnimation />} />
+          <Route path="/ToDolistApp" element={<ToDoListApp/>} />
+
           {/* <Route path="/box2" element={<FunAnimation />} /> */}
 
         </Routes>

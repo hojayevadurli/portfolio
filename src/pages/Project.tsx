@@ -1,18 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { ProjectList } from "../components/ProjectList";
- type ProjectProps={
-    id:number
- }
+import { ProjectList, ProjectType } from "../components/ProjectList";
+import "../styles/Project.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function Project({id} : ProjectProps){
-  const project = ProjectList[id];
+
+function Project(){
+   let { id } = useParams();
+  //  const project = ProjectList[id];
   return (
-    <div className="project">
-      <h1> {project.name}</h1>
+    <div className="project">     
+      {/* <h1>{project.name}</h1>
+      <img src={project.image} /> */}
       <p>
-        <b>Skills:</b> {project.skills}
-      </p>
+        <Router>
+           <Route path="/project" element={<Project />} />
+        </Router>
+      </p>     
     </div>
   );
 }
