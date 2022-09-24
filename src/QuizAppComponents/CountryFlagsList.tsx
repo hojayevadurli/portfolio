@@ -2,34 +2,29 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import toDoListApp from "../styles/toDoListApp.png";
 import QuizApp from "../styles/QuizApp.png";
 
-
-
-export type ProjectType ={
+export type CountryFlagType ={
   name:string,
-  image: any,
-  skills: string,
+  description: string,
   url: string
 }
 
-export const ProjectList : ProjectType[] = [
+export const CountryFlagsList : CountryFlagType[] = [
     {
-      name: "To Do List App",
-      image: toDoListApp,
-      skills: "React, TypeScript ,HTML,CSS",
-      url:"../toDoListApp"
-    },
+      name: "Antarctica",
+      description: "Coldest Continent of the world",
+      url:"https://flagcdn.com/256x192/aq.png"
+     },
     {
-      name: "Quiz App",
-      image:QuizApp,
-      skills: "React",
-      url:"../QuizApp"
-    },
-    {
-      name: "Project 3",
-      image:QuizApp,
-      skills: "React",
-      url:"../QuizApp"
+        name: "Pakistan",
+        description: "One of the Neighbours of India",
+        url:"https://flagcdn.com/256x192/pk.png"
     }
+    // {
+    //   name: "Project 3",
+    //   image:QuizApp,
+    //   skills: "React",
+    //   url:"../QuizApp"
+    // }
     // {
     //   id:7,
     //   name: "Project 4",

@@ -25,6 +25,7 @@ function Settings() {
       }
 	return (
 		<div>
+        <h1>Quiz App</h1>
 			<div>
           <h2>Select Category:</h2>
           <select value={questionCategory} onChange={handleCategoryChange}>
@@ -33,8 +34,7 @@ function Settings() {
                 return (
                     <option value={option.id} key={option.id}>
                         {option.name}
-                    </option>
-                  
+                    </option>                  
                 );
             })}
           </select>

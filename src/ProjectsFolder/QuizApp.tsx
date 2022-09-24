@@ -9,7 +9,6 @@ const store = createStore(Reducer);
 function QuizApp() {
   return (
     <div className="QuizApp">
-      <h1>Quiz App</h1>
       <Settings />
     </div>
   );
