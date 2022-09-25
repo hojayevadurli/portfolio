@@ -11,10 +11,7 @@ export default function CountryQuiz() {
   return (
     <div className='quiz-container'>
         <h1>CountryQuiz</h1>
-        <div className='countryFlagsList'>
-            {CountryFlagsList.map((flag,id)=>
-            <CountryQuiz {... flag} key={id}/>)}
-        </div>
+        
     </div>
   )
 }

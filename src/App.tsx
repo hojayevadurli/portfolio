@@ -23,6 +23,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/funanimation" element={<FunAnimation />} />
           <Route path="/ToDolistApp" element={<ToDoListApp/>} />
+          <Route path="/QuizApp" element={<QuizApp/>} />
           <Route path="/CountryQuiz" element={<CountryQuiz/>} />
 
          </Routes>
