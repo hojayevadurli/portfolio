@@ -7,7 +7,7 @@ function Navbar() {
 
   const location = useLocation();
 
-  useMemo(() => {
+  useCallback(() => {
     setExpandNavbar(false);
   }, [location]);
 
