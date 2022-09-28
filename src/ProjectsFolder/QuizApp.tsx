@@ -10,11 +10,6 @@ const store = createStore(Reducer);
 function QuizApp() {
 
   const [name, setName] = useState("");
-  const previousName = useRef('');
-
-  useEffect(() => {
-    previousName.current = name;
-  }, [name]);
 
   const[dark, setDark]=useState(false)
   const theme ={
@@ -26,12 +21,6 @@ function QuizApp() {
       <button onClick={()=>setDark(prevDark=> !prevDark)}>
         Toggle Theme
       </button>
-      <input value={name}  onChange={(e) => setName(e.target.value)}/>
-      <div> My Name is: {name} and it used to be {previousName.current}
-      
-      
-      </div>
-
       <Settings />
     </div>
   );

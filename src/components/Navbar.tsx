@@ -28,6 +28,8 @@ function Navbar() {
         <Link to="/experience"> Experience </Link>
         <Link to="/funanimation"> FunAnimation</Link>
         <Link to="/countryQuiz"> Country Flags quiz</Link>
+        <Link to="/Auth"> Authentiication</Link>
+
 
 
       </div>
