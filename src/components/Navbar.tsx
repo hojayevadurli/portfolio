@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useMemo} from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -7,7 +7,7 @@ function Navbar() {
 
   const location = useLocation();
 
-  useEffect(() => {
+  useCallback(() => {
     setExpandNavbar(false);
   }, [location]);
 
@@ -27,6 +27,8 @@ function Navbar() {
         <Link to="/projects"> Projects </Link>
         <Link to="/experience"> Experience </Link>
         <Link to="/funanimation"> FunAnimation</Link>
+        <Link to="/countryQuiz"> Country Flags quiz</Link>
+
 
       </div>
     </div>

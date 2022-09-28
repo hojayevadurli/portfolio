@@ -8,7 +8,7 @@ import "../styles/FunAnimation.css";
 export default function FunAnimation() {
   return (
     <div className='FunAnimation'>
-        <Box1/>
+        <Box1/>        
         <Box2/>
         <Box3/>
     </div>

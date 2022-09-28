@@ -7,6 +7,10 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FunAnimation from "./pages/FunAnimation";
 import Box1 from "./components/Box1";
+import Project from "./pages/Project";
+import ToDoListApp from "./ProjectsFolder/ToDolistApp";
+import QuizApp from "./ProjectsFolder/QuizApp";
+import CountryQuiz from "./QuizAppComponents/CountryQuiz";
 
 function App() {
   return (
@@ -18,11 +22,13 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/funanimation" element={<FunAnimation />} />
-          {/* <Route path="/box2" element={<FunAnimation />} /> */}
+          <Route path="/ToDolistApp" element={<ToDoListApp/>} />
+          <Route path="/QuizApp" element={<QuizApp/>} />
+          <Route path="/CountryQuiz" element={<CountryQuiz/>} />
 
-        </Routes>
-        <Footer/>
+         </Routes>
       </Router>
+       <Footer/>
     </div>
   );
 }

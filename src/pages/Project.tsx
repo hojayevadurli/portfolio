@@ -1,19 +1,31 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { ProjectList } from "../components/ProjectList";
- type ProjectProps={
-    id:number
- }
+import { ProjectList, ProjectType } from "../components/ProjectList";
+import "../styles/Project.css";
+import { BrowserRouter as Router,Link, Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Project({id} : ProjectProps){
-  const project = ProjectList[id];
+type ProjectProps={
+  project: ProjectType
+}
+
+
+function Project({project}:ProjectProps){
+  //  const { id } = useParams<ProjectParamsType>();
+  //  const project = ProjectList[parseInt(id??"0")];
+  const navigate = useNavigate();
+
   return (
-    <div className="project">
-      <h1> {project.name}</h1>
-      <p>
-        <b>Skills:</b> {project.skills}
-      </p>
-    </div>
+    <div
+    className="projectItem"
+    onClick={() => {
+      navigate(project.url);
+    }}
+  >
+    <div style={{ backgroundImage: `url(${project.image})` }} className="bgImage" />
+    <h1> {project.name} </h1>
+    <h2>Skills:</h2> <p>{project.skills}</p>
+  </div>
   );
 }
 
