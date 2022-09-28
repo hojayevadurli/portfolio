@@ -7,20 +7,7 @@ type PropTypes={
     email: String
 }
 function Experience(){
-    // const [firstName, setFirstName]=useState("");
-    // const [lastName, setLastName]=useState("");
-    // const [email, setEmail]=useState("");
-
-    // const formik=useFormik<FormikValues>({
-    //     initialValues:{
-    //         firstName: "",
-    //         lastName: "",
-    //         email:""
-    //     },
-    //     onsubmit: (values:any)=>{
-    //         console.log(values)
-    //     }
-    // })
+   
     return (
         <div className="App">
       <h1>Contact Us</h1>
