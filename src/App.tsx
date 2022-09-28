@@ -11,6 +11,7 @@ import Project from "./pages/Project";
 import ToDoListApp from "./ProjectsFolder/ToDolistApp";
 import QuizApp from "./ProjectsFolder/QuizApp";
 import CountryQuiz from "./QuizAppComponents/CountryQuiz";
+import Auth from "./pages/Auth";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path="/ToDolistApp" element={<ToDoListApp/>} />
           <Route path="/QuizApp" element={<QuizApp/>} />
           <Route path="/CountryQuiz" element={<CountryQuiz/>} />
+          <Route path="/Auth" element={<Auth/>} />
+
 
          </Routes>
       </Router>
