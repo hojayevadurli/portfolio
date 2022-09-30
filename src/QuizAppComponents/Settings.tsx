@@ -1,5 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
+
+import { Navigate } from 'react-router-dom';
+
 type TriviaCategory={
     id:number,
     name: string
@@ -16,7 +19,7 @@ function Settings() {
 
     const [numberOfQuestions, setNumberOfQuestions] = useState(50);
 
-
+  
 	// useEffect hook
 
 	useEffect(() => {
@@ -45,6 +48,8 @@ function Settings() {
       const handleNumberOfQuestions = (event: { target: { value: React.SetStateAction<number>; }; }) => {
         setNumberOfQuestions(event.target.value)
       }
+      
+      
 	return (
 		<div>
         <h1>Quiz App</h1>
@@ -56,12 +61,25 @@ function Settings() {
                 return (
                     <option value={option.id} key={option.id}>
                         {option.name}
-                    </option>                  
-                );
-            })}
-          </select>
+                    </option>                              
+                );                
+            }) 
+            }            
+          </select>       
+           
         </div>
-        <div>
+         {/* {
+           if({questionCategory}==='22')
+           {
+             console.log({questionCategory})
+             // <Navigate to="/CountryQuiz" />
+           }  
+         } */}
+{/* 
+        {questionCategory==='22'? <Settings /> : <Navigate to="/CountryQuiz" />} */}
+
+       <h1>GOT HERE</h1>
+        {/* <div>
           <h2>Select Difficulty:</h2>
           <select value={questionDifficulty} onChange={handleDifficultyChange}>
             <option value="" key="difficulty-0">All</option>
@@ -78,12 +96,10 @@ function Settings() {
             <option value="multiple" key="type-1">Multiple Choice</option>
             <option value="boolean" key="type-2">True/False</option>
           </select>
-        </div>
-				<div>
-          {/* <h2>Amount of Questions:</h2>
-          <input value={numberOfQuestions} onChange={handleNumberOfQuestions} /> */}
-        </div>
+        </div> */}  
+         
 		</div>
+    
     
     
 	);

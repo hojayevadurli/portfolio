@@ -12,6 +12,7 @@ import ToDoListApp from "./ProjectsFolder/ToDolistApp";
 import QuizApp from "./ProjectsFolder/QuizApp";
 import CountryQuiz from "./QuizAppComponents/CountryQuiz";
 import Auth from "./pages/Auth";
+import Settings from "./QuizAppComponents/Settings";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           <Route path="/QuizApp" element={<QuizApp/>} />
           <Route path="/CountryQuiz" element={<CountryQuiz/>} />
           <Route path="/Auth" element={<Auth/>} />
+          <Route path="/settings" element={<Settings/>} />
+
 
 
          </Routes>
