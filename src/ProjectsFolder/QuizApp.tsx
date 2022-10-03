@@ -32,15 +32,12 @@ console.log(loggedIn)
   
   return (
     <div style={theme} className="QuizApp">
-      {/* <button onClick={()=>setDark(prevDark=> !prevDark)}>
-        Toggle Theme
-      </button> */}
+    
       {isLoggedIn ?  <Navigate to="/Settings" /> : <Navigate to="/Auth" />}
-     {/* <nav>
-      <ul>
-      <li><Auth/></li>
-      <li><Settings /></li></ul></nav> */}
-      {/* <Navigate to="../QuizAppComponents/Settings" /> */}
+      {isLoggedIn && (
+              <button onClick={logoutHandler}>Logout</button>
+          )}
+    
     </div>
   );
 

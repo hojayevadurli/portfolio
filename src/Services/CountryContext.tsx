@@ -1,8 +1,3 @@
-type CountryPropTypes={
-    
-
-}
-
 export const getCountries=()=>{
     const apiUrl = `https://restcountries.com/v3.1/all`;
 

@@ -1,7 +1,8 @@
 
+import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 type TriviaCategory={
     id:number,
@@ -10,13 +11,13 @@ type TriviaCategory={
 function Settings() {
     // useState hook 
   const [loading, setLoading] = useState(false);
-
+  const navigate=useNavigate();
 	const [options, setOptions] = useState<TriviaCategory[]>([]);
     // useEffect hook
     const [questionCategory, setQuestionCategory] = useState("");
     const [questionDifficulty, setQuestionDifficulty] = useState("");
     const [questionType, setQuestionType] = useState("");
-
+  
     const [numberOfQuestions, setNumberOfQuestions] = useState(50);
 
   
@@ -25,15 +26,19 @@ function Settings() {
 	useEffect(() => {
 	    const apiUrl = `https://opentdb.com/api_category.php`;
       setLoading(true);
-
 	    fetch(apiUrl)
 	      .then((res) => res.json())
 	      .then((response) => {
           setLoading(false);
-
 	        setOptions(response.trivia_categories);
-	      });
-	  }, [setOptions]);
+	      }).catch((err)=>{
+           // Stop loading in case of error
+
+          console.error(err);
+        });
+	  }, [options,loading]);
+
+
       // event that is called when an option is chosen
       const handleCategoryChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
         setQuestionCategory(event.target.value)
@@ -49,10 +54,39 @@ function Settings() {
         setNumberOfQuestions(event.target.value)
       }
       
-      
-	return (
+      if(questionCategory==='22')
+      {
+        navigate('/CountryQuiz')
+      }
+      if (loading===true) {
+        return <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <CircularProgress />
+            <p>Loading..</p>
+        </div>
+
+    }	
+    
+    if(loading===false)
+    {
+      return(
+        <select value={questionCategory} onChange={handleCategoryChange}>
+        <option>All</option>
+        {options?.map((option) => {
+            return (
+                <option value={option.id} key={option.id}>
+                    {option.name}
+                </option>                              
+            );                
+        }) 
+        }            
+      </select>    
+      )
+
+    }
+    return (
 		<div>
-        <h1>Quiz App</h1>
+
+        <h1>Settings</h1>
 			<div>
           <h2>Select Category:</h2>
           <select value={questionCategory} onChange={handleCategoryChange}>
@@ -75,8 +109,7 @@ function Settings() {
              // <Navigate to="/CountryQuiz" />
            }  
          } */}
-{/* 
-        {questionCategory==='22'? <Settings /> : <Navigate to="/CountryQuiz" />} */}
+
 
        <h1>GOT HERE</h1>
         {/* <div>
