@@ -26,12 +26,13 @@ function Settings() {
 	useEffect(() => {
 	    const apiUrl = `https://opentdb.com/api_category.php`;
       setLoading(true);
+      
 	    fetch(apiUrl)
-	      .then((res) => res.json())
-	      .then((response) => {
-          setLoading(false);
-	        setOptions(response.trivia_categories);
-	      }).catch((err)=>{
+      .then((res) => res.json())
+      .then((response) => {
+        setLoading(false);
+        setOptions(response.trivia_categories);
+      }).catch((err)=>{
            // Stop loading in case of error
 
           console.error(err);
@@ -58,31 +59,31 @@ function Settings() {
       {
         navigate('/CountryQuiz')
       }
-      if (loading===true) {
-        return <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <CircularProgress />
-            <p>Loading..</p>
-        </div>
+    //   if (loading) {
+    //     return <div style={{ display: 'flex', justifyContent: 'center' }}>
+    //         <CircularProgress />
+    //         <p>Loading..</p>
+    //     </div>
 
-    }	
+    // }	
     
-    if(loading===false)
-    {
-      return(
-        <select value={questionCategory} onChange={handleCategoryChange}>
-        <option>All</option>
-        {options?.map((option) => {
-            return (
-                <option value={option.id} key={option.id}>
-                    {option.name}
-                </option>                              
-            );                
-        }) 
-        }            
-      </select>    
-      )
+    // if(!loading)
+    // {
+    //   return(
+    //     <select value={questionCategory} onChange={handleCategoryChange}>
+    //     <option>All</option>
+    //     {options?.map((option) => {
+    //         return (
+    //             <option value={option.id} key={option.id}>
+    //                 {option.name}
+    //             </option>                              
+    //         );                
+    //     }) 
+    //     }            
+    //   </select>    
+    //   )
 
-    }
+    // }
     return (
 		<div>
 
