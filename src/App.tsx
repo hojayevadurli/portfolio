@@ -13,6 +13,8 @@ import QuizApp from "./ProjectsFolder/QuizApp";
 import CountryQuiz from "./QuizAppComponents/CountryQuiz";
 import Auth from "./pages/Auth";
 import Settings from "./QuizAppComponents/Settings";
+import Blogs from "./BlogEntries/Blogs";
+import BlogsList from "./components/BlogsList";
 
 function App() {
   return (
@@ -29,6 +31,12 @@ function App() {
           <Route path="/CountryQuiz" element={<CountryQuiz/>} />
           <Route path="/Auth" element={<Auth/>} />
           <Route path="/settings" element={<Settings/>} />
+          <Route path="/BlogsList" element={<BlogsList/>} />
+          <Route path="/BlogsList/:title" element={<Blogs/>} />
+
+
+          {/* <Route path="/exam" element={<Exam/>} /> */}
+
 
 
 

@@ -314,36 +314,25 @@ export default function CountryQuiz() {
  
 async function settingCountries(){
     const countries : any = await getCountries()
-    console.log(countries)
-     setCountry(countries)
-    // console.log(countries)
-    // setCountry(countries)
-    // let count: any = JSON.parse(JSON.stringify(countries))
-    // console.log(countries[0])
-    // let temp: any[] = JSON.parse(JSON.stringify(countries,null,2));
-
-    // for(var i of countries){
-
-    //   console.log(i)
-    // }    
-    // const countyFilter=countries.filter(country=>country.flags==="Turkmen")
-    // console.log(countyFilter)
+    setCountry(countries)
+    
   };
-
+  
   useEffect(()=>{
     settingCountries()
   },[])
+  
+  const filterCountries= countrylist.filter(country=>(country.name).official.includes("U"))
+  
+  const randomQuestionNumber = Math.floor(Math.random() * 2)
+  console.log(countrylist.length)
 
-  // const filterCountries=countrylist.filter(country=>{country.name})
-  const filterCountries= countrylist.filter(country=>(country.name).official.includes('U'))
-// }
-  // const randomQuestionNumber = Math.floor(Math.random() * 2)
-
-  // const randomNumber1 = Math.floor(Math.random() * countries.length)
+  const randomNumber1 = Math.floor(Math.random() * countrylist.length)
+  console.log(randomNumber1)
 
   
-  // if ((!countries[randomNumber1].capital) || 
-  //     (!countries[randomNumber1].flag)
+  // if ((!countrylist[randomNumber1].capital) || 
+  //     (!countrylist[randomNumber1].flag)
   // ) {
   //   getCountries()
     
@@ -367,7 +356,7 @@ async function settingCountries(){
         {/* {filterCountries.map(j => <li>{j.name} {j.flag}</li>)} */}
         {/* .map(j => <li>{j.name.official} {j.capital}</li>)} */}
          <ul>
-        {filterCountries.map(j => <li>{j.name.official} {j.capital}</li>)}
+        {countrylist.map(j => <li>{j.name.official}</li>)}
     </ul>
       </div>
   )

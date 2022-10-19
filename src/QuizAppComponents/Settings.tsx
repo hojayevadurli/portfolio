@@ -59,31 +59,7 @@ function Settings() {
       {
         navigate('/CountryQuiz')
       }
-    //   if (loading) {
-    //     return <div style={{ display: 'flex', justifyContent: 'center' }}>
-    //         <CircularProgress />
-    //         <p>Loading..</p>
-    //     </div>
-
-    // }	
-    
-    // if(!loading)
-    // {
-    //   return(
-    //     <select value={questionCategory} onChange={handleCategoryChange}>
-    //     <option>All</option>
-    //     {options?.map((option) => {
-    //         return (
-    //             <option value={option.id} key={option.id}>
-    //                 {option.name}
-    //             </option>                              
-    //         );                
-    //     }) 
-    //     }            
-    //   </select>    
-    //   )
-
-    // }
+   
     return (
 		<div>
 
@@ -103,16 +79,8 @@ function Settings() {
           </select>       
            
         </div>
-         {/* {
-           if({questionCategory}==='22')
-           {
-             console.log({questionCategory})
-             // <Navigate to="/CountryQuiz" />
-           }  
-         } */}
+        
 
-
-       <h1>GOT HERE</h1>
         {/* <div>
           <h2>Select Difficulty:</h2>
           <select value={questionDifficulty} onChange={handleDifficultyChange}>
@@ -139,3 +107,32 @@ function Settings() {
 	);
 }
 export default Settings;
+
+
+
+
+ //   if (loading) {
+    //     return <div style={{ display: 'flex', justifyContent: 'center' }}>
+    //         <CircularProgress />
+    //         <p>Loading..</p>
+    //     </div>
+
+    // }	
+    
+    // if(!loading)
+    // {
+    //   return(
+    //     <select value={questionCategory} onChange={handleCategoryChange}>
+    //     <option>All</option>
+    //     {options?.map((option) => {
+    //         return (
+    //             <option value={option.id} key={option.id}>
+    //                 {option.name}
+    //             </option>                              
+    //         );                
+    //     }) 
+    //     }            
+    //   </select>    
+    //   )
+
+    // }

@@ -25,16 +25,17 @@ export const ProjectList : ProjectType[] = [
       url:"../QuizApp"
     },
     {
-      name: "Project 3",
+      name: "Routing Practice in React ",
+      image:QuizApp,
+      skills: "React",
+      url:"../RoutingBlog.md"
+    },
+    {
+      name: "Pro",
       image:QuizApp,
       skills: "React",
       url:"../QuizApp"
     }
-    // {
-    //   id:7,
-    //   name: "Project 4",
-    //   skills: "React",
-    // },
     // {
     //   id:8,
     //   name: "Project 5",
